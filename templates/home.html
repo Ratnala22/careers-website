@@ -27,7 +27,11 @@
       fermentum.
     </p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-    <p class="lead">TODO- Show the jobs here</p>
+    <div>
+      {%for job in jobs%}
+      {% include 'jobs.html' %}
+      {%endfor%}
+    </div>
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
       <p class="mt-4">Copyright 2024, Bytewise</p>
