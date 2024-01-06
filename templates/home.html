@@ -10,23 +10,42 @@
     height: 720px;
     width: 100%;
     object-fit: cover;
+    margin-bottom:16px;
   }
 </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" id="cover" src="static/coverpic.jpg" >
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Bytewise Careers</h1>
-    <img class="img-fluid" id="cover" src="static/coverpic.jpg" >
     <h2 class="text-center mt-2 mb-4">About</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at 
-      sapien non urna vulputate consectetur. Nulla facilisi. Phasellus 
-      suscipit nulla vitae eros suscipit semper. Proin auctor, ligula sed 
-      commodo bibendum, justo elit condimentum libero, vel pellentesque 
-      eros elit eget lectus. Quisque rhoncus nisi nec ante sagittis 
-      fermentum.
-    </p>
-    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div class="row" style="margin-bottom:16px">
+      <div class="col-md-6">
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at 
+          sapien non urna vulputate consectetur. Nulla facilisi. Phasellus 
+          suscipit nulla vitae eros suscipit semper. Proin auctor, ligula sed 
+          commodo bibendum, justo elit condimentum libero, vel pellentesque 
+          eros elit eget lectus. Quisque rhoncus nisi nec ante sagittis 
+          fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at 
+          sapien non urna vulputate consectetur. Nulla facilisi. Phasellus 
+          suscipit nulla vitae eros suscipit semper. Proin auctor, ligula sed 
+          commodo bibendum, justo elit condimentum libero, vel pellentesque 
+          eros elit eget lectus. Quisque rhoncus nisi nec ante sagittis 
+          fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at 
+          sapien non urna vulputate consectetur. Nulla facilisi. Phasellus 
+          suscipit nulla vitae eros suscipit semper. Proin auctor, ligula sed 
+          commodo bibendum, justo elit condimentum libero, vel pellentesque 
+          eros elit eget lectus. Quisque rhoncus nisi nec ante sagittis 
+          fermentum.
+        </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="static/people.avif" style="height:420px; border-radius:4px;">
+      </div>
+    </div>
+    <h2 class="text-center mt-2 mb-4">Job Openings</h2>
     <div>
       {%for job in jobs%}
       {% include 'jobs.html' %}
@@ -34,8 +53,8 @@
     </div>
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2024, Bytewise</p>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
