@@ -10,6 +10,7 @@ def load_jobs_from_db():
       list.append(row._asdict())
     return list
 
+  
 def load_job_from_db(id):
   with engine.connect() as conn:
     result=conn.execute(text(f"select * from jobs where id = {id}"))
